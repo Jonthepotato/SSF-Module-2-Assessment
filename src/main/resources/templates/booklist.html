@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Search result for chosen book</h1>
+    <div data-th-each="book:${books}">
+        <div data-th-object = "${book}">
+        <a data-th-href = "*{key}"><p data-th-text="*{title}"></p></a>
+        </div>
+    </div>
+    <a href = "/"><p>Back</p></a>
+</body>
+</html>
